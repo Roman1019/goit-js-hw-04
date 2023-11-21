@@ -1,10 +1,19 @@
-function filterArray(numbers, value) {
-  const profile = {
-    username: "Jacob",
-    playTime: 300,
-  };
-  return `${profile.[username]} has ${profile.[playTime]} active hours!`;
-}
+const profile = {
+  username: "Jacob",
+  playTime: 300,
+
+  getInfo() {
+    return `${profile.username} has ${profile.playTime} active hours!`;
+  },
+
+  changeUsername(newUsername) {
+    this.username = newUsername;
+  },
+
+  updatePlayTime(newPlaytime) {
+    this.playTime += newPlaytime;
+  },
+};
 
 console.log(profile.getInfo()); // "Jacob has 300 active hours!"
 
